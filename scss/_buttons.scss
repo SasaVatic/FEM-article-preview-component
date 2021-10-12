@@ -1,0 +1,39 @@
+.btn-share {
+    height: 3.5rem;
+    min-width: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: $light-grayish-blue;
+    z-index: 2;
+    transition: all .2s ease-in;
+
+    &.active {
+        background-color: $desaturated-dark-blue;
+
+        img {
+            filter: brightness(0) invert(100%);
+        }
+
+        &:hover {
+            background-color: $light-grayish-blue;
+
+            img {
+                filter: invert(0);
+            }
+    
+        }
+    }
+
+    img {
+        height: 35%;
+    }
+
+    &:hover {
+        background-color: $desaturated-dark-blue;
+
+        img {
+            filter: brightness(0) invert(100%);
+        }
+    }
+}

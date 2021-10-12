@@ -1,0 +1,228 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem;
+  background-color: #ecf2f8;
+  user-select: none;
+  overflow-x: hidden; }
+  body.active {
+    padding-right: 7rem; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
+
+.attribution {
+  margin: 1rem;
+  color: #48556a;
+  padding: .5rem;
+  border-radius: 1rem;
+  text-align: center; }
+  .attribution:hover a:nth-child(2) {
+    transform: rotateY(0);
+    color: transparent;
+    background-image: url("../public/images/fawkes-mask.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 5rem;
+    height: 5rem; }
+  .attribution a {
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #3e52a3; }
+    .attribution a:nth-child(2) {
+      transform: rotateY(360deg);
+      transition: all .2s; }
+
+.btn-share {
+  height: 3.5rem;
+  min-width: 3.5rem;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #ecf2f8;
+  z-index: 2;
+  transition: all .2s ease-in; }
+  .btn-share.active {
+    background-color: #6d7f97; }
+    .btn-share.active img {
+      filter: brightness(0) invert(100%); }
+    .btn-share.active:hover {
+      background-color: #ecf2f8; }
+      .btn-share.active:hover img {
+        filter: invert(0); }
+  .btn-share img {
+    height: 35%; }
+  .btn-share:hover {
+    background-color: #6d7f97; }
+    .btn-share:hover img {
+      filter: brightness(0) invert(100%); }
+
+body {
+  font-size: 1.3rem;
+  font-family: 'Manrope', sans-serif; }
+
+.card {
+  max-width: 768px;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+  @media screen and (min-width: 576px) {
+    .card {
+      flex-direction: row; } }
+  .card__picture {
+    background-image: url("/images/drawers.jpg");
+    background-position: top;
+    background-size: cover;
+    height: 21.5rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
+    @media screen and (min-width: 576px) {
+      .card__picture {
+        height: auto;
+        width: 100%;
+        background-position: left;
+        border-bottom-left-radius: 1rem;
+        border-top-right-radius: 0; } }
+  @media screen and (min-width: 576px) {
+    .card .card__content-wrapper {
+      display: flex;
+      flex-direction: column; } }
+  .card__content-box {
+    padding: 4rem 3rem 0 3rem; }
+    @media screen and (min-width: 576px) {
+      .card__content-box {
+        padding: 4rem 3rem 0 4rem; } }
+  .card__heading {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #48556a; }
+    @media screen and (min-width: 576px) {
+      .card__heading {
+        font-size: 1.5em; } }
+  .card__text {
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #6d7f97;
+    margin: 2rem 0 2.2rem 0; }
+  .card__author-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    transition: all 0.2s ease-in; }
+    .card__author-box.active {
+      padding: 1.3rem 3rem; }
+    @media screen and (min-width: 576px) {
+      .card__author-box {
+        padding: 0 4rem 3.5rem 4rem; } }
+  .card__author {
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
+    .card__author-img {
+      height: 4.5rem;
+      border-radius: 50%; }
+    .card__author-heading {
+      font-size: 1em;
+      line-height: 1.5; }
+      .card__author-heading--main {
+        display: block;
+        font-weight: 700;
+        color: #48556a; }
+      .card__author-heading--sub {
+        display: block;
+        font-weight: 500;
+        color: #9eafc2; }
+  .card__share-box {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #48556a;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: all 0.2s ease-in; }
+    .card__share-box.active {
+      opacity: 1; }
+      .card__share-box.active .card__share ul li a {
+        cursor: pointer; }
+    @media screen and (min-width: 576px) {
+      .card__share-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        top: -7.5rem;
+        right: -6.5rem;
+        left: auto;
+        width: auto;
+        height: auto;
+        background-color: #48556a;
+        border-radius: 1rem; } }
+  .card__share {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 2rem 7rem 2rem 3rem;
+    width: 100%;
+    height: 100%;
+    position: relative; }
+    .card__share p {
+      color: #9eafc2;
+      font-weight: 500;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 0.5rem; }
+    .card__share ul {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem; }
+      .card__share ul li a {
+        display: block;
+        height: 2.3rem;
+        cursor: default;
+        transition: all .1s ease-in; }
+        .card__share ul li a:hover {
+          transform: scale(1.3); }
+      .card__share ul li a img {
+        height: 100%; }
+    @media screen and (min-width: 576px) {
+      .card__share {
+        padding: 1.7rem 3.2rem;
+        width: auto;
+        height: auto; }
+        .card__share-arrow {
+          position: absolute;
+          clip-path: polygon(50% 100%, 0 0, 100% 0);
+          background-color: #48556a;
+          width: 2.5rem;
+          height: 1rem;
+          bottom: 0;
+          right: 50%;
+          transform: translate(50%, 100%); } }
