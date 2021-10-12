@@ -38,15 +38,15 @@ ul {
 .attribution {
     margin: 1rem;
     color: $very-dark-grayish-blue;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 1rem;
     text-align: center;
 
     &:hover {
-        & a:nth-child(2) {            
+        & a:nth-child(2) {
             transform: rotateY(0);
             color: transparent;
-            background-image: url('../public/images/fawkes-mask.svg');
+            background-image: url("/images/fawkes-mask.svg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 5rem;
@@ -62,7 +62,7 @@ ul {
 
         &:nth-child(2) {
             transform: rotateY(360deg);
-            transition: all .2s;
+            transition: all 0.2s;
         }
     }
 }

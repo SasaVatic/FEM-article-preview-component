@@ -6,7 +6,7 @@
     cursor: pointer;
     background-color: $light-grayish-blue;
     z-index: 2;
-    transition: all .2s ease-in;
+    transition: all 0.2s ease-in;
 
     &.active {
         background-color: $desaturated-dark-blue;
@@ -21,7 +21,6 @@
             img {
                 filter: invert(0);
             }
-    
         }
     }
 
